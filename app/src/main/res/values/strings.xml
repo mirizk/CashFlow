@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Mityaalim</string>
+    <string name="events">EVENTS</string>
+    <string name="investment">investment</string>
+    <string name="academic">academic</string>
+    <string name="budget">budget</string>
 </resources>
