@@ -80,7 +80,7 @@
         app:layout_constraintBottom_toBottomOf="@id/investment_background"/>
 
     <View
-        android:id="@+id/academic_background"
+        android:id="@+id/academy_background"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/clear_black"
@@ -91,25 +91,25 @@
         app:layout_constraintWidth_percent="0.35"
         app:layout_constraintDimensionRatio="1" />
     <ImageView
-        android:id="@+id/ic_academic"
+        android:id="@+id/ic_academy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_academic"
+        android:src="@drawable/ic_academy"
         android:layout_marginTop="@dimen/_5sdp"
-        app:layout_constraintTop_toTopOf="@id/academic_background"
-        app:layout_constraintStart_toStartOf="@id/academic_background"
-        app:layout_constraintEnd_toEndOf="@id/academic_background"
+        app:layout_constraintTop_toTopOf="@id/academy_background"
+        app:layout_constraintStart_toStartOf="@id/academy_background"
+        app:layout_constraintEnd_toEndOf="@id/academy_background"
         tools:ignore="ContentDescription" />
     <TextView
-        android:id="@+id/academic"
+        android:id="@+id/academy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/academic"
+        android:text="@string/academy"
         android:textColor="@color/white"
         android:textSize="@dimen/_18ssp"
-        app:layout_constraintStart_toStartOf="@id/academic_background"
-        app:layout_constraintEnd_toEndOf="@id/academic_background"
-        app:layout_constraintBottom_toBottomOf="@id/academic_background"/>
+        app:layout_constraintStart_toStartOf="@id/academy_background"
+        app:layout_constraintEnd_toEndOf="@id/academy_background"
+        app:layout_constraintBottom_toBottomOf="@id/academy_background"/>
 
     <View
         android:id="@+id/budget_background"
