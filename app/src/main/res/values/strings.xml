@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Mityaalim</string>
+    <string name="events">EVENTS</string>
+    <string name="investment">investments</string>
+    <string name="academy">academy</string>
+    <string name="budget">budget</string>
+    <string name="logoContentDescription">logo</string>
 </resources>

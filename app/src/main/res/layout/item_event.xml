@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/_10sdp"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/event_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        tools:text="שם האירוע"
+        android:textSize="@dimen/_18ssp"
+        android:textColor="@color/text_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/event_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="פירוט ומידע על האירוע לדוגמא, פה נכנס מידע לגבי האירוע."
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/text_color"
+        app:layout_constraintTop_toBottomOf="@id/event_title"
+        app:layout_constraintStart_toStartOf="@id/event_title"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/event_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="19.2.21 18:00"
+        android:textSize="@dimen/_16ssp"
+        android:textColor="@color/text_color"
+        app:layout_constraintTop_toBottomOf="@id/event_description"
+        app:layout_constraintStart_toStartOf="@id/event_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

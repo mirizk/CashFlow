@@ -10,5 +10,38 @@
         android:id="@+id/homeFragment"
         android:name="com.mityaalim.ui.main.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_budgetFragment"
+            app:destination="@id/budgetFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_investmentFragment"
+            app:destination="@id/investmentFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_academyFragment"
+            app:destination="@id/academyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/budgetFragment"
+        android:name="com.mityaalim.ui.main.budget.BudgetFragment"
+        android:label="BudgetFragment"
+        tools:layout="@layout/fragment_budget"/>
+    <fragment
+        android:id="@+id/investmentFragment"
+        android:name="com.mityaalim.ui.main.investment.InvestmentFragment"
+        android:label="InvestmentFragment"
+        tools:layout="@layout/fragment_investment"/>
+    <fragment
+        android:id="@+id/eventsFragment"
+        android:name="com.mityaalim.ui.main.events.EventsFragment"
+        android:label="EventsFragment"
+        tools:layout="@layout/fragment_events"/>
+    <fragment
+        android:id="@+id/academyFragment"
+        android:name="com.mityaalim.ui.main.events.AcademyFragment"
+        android:label="AcademyFragment"
+        tools:layout="@layout/fragment_academy"/>
 </navigation>
