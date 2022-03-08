@@ -1,6 +1,6 @@
 package com.mityaalim.ui.main.events
 
-import com.example.mityaalim.databinding.ItemEventBinding
+import com.mityaalim.databinding.ItemEventBinding
 import com.maatayim.koren.ui.base.list.BaseViewHolder
 
 class EventViewHolder(
