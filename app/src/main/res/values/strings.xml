@@ -5,4 +5,6 @@
     <string name="academy">academy</string>
     <string name="budget">budget</string>
     <string name="logoContentDescription">logo</string>
+    <string name="add_income">add income</string>
+    <string name="add_expense">add expense</string>
 </resources>

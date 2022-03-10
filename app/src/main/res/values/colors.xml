@@ -7,6 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="clear_black">#99000000</color>
-    <color name="text_color">#99000000</color>
+    <color name="main_background">#E7F6E8</color>
+    <color name="green">#24AB24</color>
+    <color name="dark_green">#0B640C</color>
+    <color name="text_color">#18373A</color>
+    <color name="incomes_color">#308230</color>
+    <color name="expenses_color">#B12323</color>
 </resources>
