@@ -9,14 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.mityaalim.databinding.FragmentAddBudgetBinding
+import com.mityaalim.databinding.FragmentAddBudgetBinding
 import com.mityaalim.data.enums.BudgetType
 import dagger.hilt.android.AndroidEntryPoint
 import java.text.SimpleDateFormat
 import java.util.*
 import android.text.Editable
 import android.text.TextWatcher
-import com.example.mityaalim.R
+import com.mityaalim.R
 
 
 @AndroidEntryPoint
