@@ -1,5 +1,6 @@
 package com.mityaalim.ui.main.budget
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -39,6 +40,7 @@ class AddBudgetFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("NewApi")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         when (args.type) {
@@ -46,11 +48,29 @@ class AddBudgetFragment : Fragment() {
             BudgetType.EXPENSE -> binding.title.text = getString(R.string.add_expense_title)
         }
 
-        binding.editDate.setText(SimpleDateFormat("dd/MM/yy").format(Date()))
-        binding.editDate.setOnClickListener {
-            val picker = createPicker()
-            picker.show()
+        setUpDate()
+        setUpName()
+        setUpSum()
+
+        binding.save.setOnClickListener {
+            viewModel.saveNewBudget(args.type, name, sum, date)
+            findNavController().popBackStack()
         }
+    }
+
+    private fun setUpSum() {
+        binding.editSum.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable) {
+                sum = if (s.isNotEmpty()) Integer.parseInt(s.toString()) else 0
+            }
+
+            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
+        })
+    }
+
+    private fun setUpName() {
         binding.editName.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable) {
                 name = s.toString()
@@ -60,21 +80,13 @@ class AddBudgetFragment : Fragment() {
 
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
         })
+    }
 
-        binding.editSum.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable) {
-                sum = if(s.isNotEmpty()) Integer.parseInt(s.toString()) else 0
-            }
-
-            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
-
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
-        })
-
-
-        binding.save.setOnClickListener {
-            viewModel.saveNewBudget(args.type, name, sum, date)
-            findNavController().popBackStack()
+    private fun setUpDate() {
+        binding.editDate.setText(SimpleDateFormat("dd/MM/yy", Locale.getDefault()).format(Date()))
+        binding.editDate.setOnClickListener {
+            val picker = createPicker()
+            picker.show()
         }
     }
 
@@ -83,8 +95,15 @@ class AddBudgetFragment : Fragment() {
             requireContext(),
         )
         picker.setOnDateSetListener { _, i, i2, i3 ->
-            binding.editDate.setText(SimpleDateFormat("dd/MM/yy").format(Date(i, i2, i3)))
-            date = Date(i, i2, i3)
+            val cal = Calendar.getInstance()
+            cal.set(i, i2, i3)
+            date = cal.time
+            binding.editDate.setText(
+                SimpleDateFormat(
+                    "dd/MM/yy",
+                    Locale.getDefault()
+                ).format(cal.time)
+            )
         }
         return picker
     }
