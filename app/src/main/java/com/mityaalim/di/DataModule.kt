@@ -1,24 +1,38 @@
 package com.mityaalim.di
 
+import android.content.Context
+import com.mityaalim.data.local.database.MityaalimDatabase
 import com.mityaalim.data.local.prefs.PrefsImpl
 import com.mityaalim.data.local.prefs.Prefs
 import com.mityaalim.data.repo.GeneralRepo
 import com.mityaalim.data.repo.RepoImpl
-import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class DataModule {
+object DataModule {
 
-    @Binds
+    @Provides
     @Singleton
-    abstract fun bindPrefs(prefsImpl: PrefsImpl): Prefs
+    fun provideDatabase(@ApplicationContext context: Context): MityaalimDatabase {
+        return MityaalimDatabase.create(context)
+    }
 
-    @Binds
+    @Provides
     @Singleton
-    abstract fun bindGeneralRepo(repoImpl: RepoImpl): GeneralRepo
+    fun provideGeneralRepo(repoImpl: RepoImpl): GeneralRepo {
+        return repoImpl
+    }
+
+    @Provides
+    @Singleton
+    fun providePrefs(prefsImpl: PrefsImpl): Prefs {
+        return prefsImpl
+    }
+
 }

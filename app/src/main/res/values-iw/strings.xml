@@ -5,4 +5,12 @@
     <string name="academy">אקדמיה</string>
     <string name="budget">תקציב</string>
     <string name="logoContentDescription">לוגו</string>
+    <string name="add_income">הוסף הכנסה</string>
+    <string name="add_expense">הוסף הוצאה</string>
+    <string name="budget_name">תיאור:</string>
+    <string name="add_income_title">הכנסה חדשה</string>
+    <string name="add_expense_title">הוצאה חדשה</string>
+    <string name="budget_sum">סכום:</string>
+    <string name="budget_date">תאריך:</string>
+    <string name="save">שמור</string>
 </resources>
