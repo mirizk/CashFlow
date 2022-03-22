@@ -7,4 +7,10 @@
     <string name="logoContentDescription">logo</string>
     <string name="add_income">add income</string>
     <string name="add_expense">add expense</string>
+    <string name="budget_name">description:</string>
+    <string name="add_income_title">New income</string>
+    <string name="add_expense_title">New expense</string>
+    <string name="budget_sum">sum:</string>
+    <string name="budget_date">date:</string>
+    <string name="save">save</string>
 </resources>
