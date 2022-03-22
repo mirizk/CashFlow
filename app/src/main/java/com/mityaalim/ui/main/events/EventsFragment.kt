@@ -8,7 +8,7 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.mityaalim.databinding.FragmentEventsBinding
+import com.mityaalim.databinding.FragmentEventsBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

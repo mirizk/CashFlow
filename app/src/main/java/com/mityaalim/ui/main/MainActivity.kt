@@ -2,7 +2,7 @@ package com.mityaalim.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.mityaalim.databinding.ActivityMainBinding
+import com.mityaalim.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

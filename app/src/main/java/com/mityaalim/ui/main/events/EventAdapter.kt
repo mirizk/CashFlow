@@ -2,7 +2,7 @@ package com.mityaalim.ui.main.events
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.example.mityaalim.databinding.ItemEventBinding
+import com.mityaalim.databinding.ItemEventBinding
 import com.maatayim.koren.ui.base.list.BaseListAdapter
 
 class EventAdapter :

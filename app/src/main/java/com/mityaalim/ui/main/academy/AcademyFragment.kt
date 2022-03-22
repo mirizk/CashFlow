@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.mityaalim.databinding.FragmentAcademyBinding
+import com.mityaalim.databinding.FragmentAcademyBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
