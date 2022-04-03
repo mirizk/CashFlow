@@ -5,13 +5,14 @@ import android.view.ViewGroup
 import com.maatayim.koren.ui.base.list.BaseListAdapter
 import com.mityaalim.databinding.ItemMonthBudgetBinding
 
-class MonthBudgetAdapter :
+class MonthBudgetAdapter(private val clickListener: (month: String) -> Unit) :
     BaseListAdapter<MonthBudgetItem, MonthBudgetViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MonthBudgetViewHolder {
         return MonthBudgetViewHolder(
             ItemMonthBudgetBinding.inflate(
                 LayoutInflater.from(parent.context), parent, false
-            )
+            ),
+            clickListener
         )
     }
 }

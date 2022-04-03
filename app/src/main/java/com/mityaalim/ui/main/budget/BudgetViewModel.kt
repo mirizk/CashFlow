@@ -34,6 +34,6 @@ class BudgetViewModel @Inject constructor(repo: GeneralRepo) : ViewModel() {
     }
 }
 
-private fun Date.getStringMonth(): String {
-    return SimpleDateFormat("MM/yy", Locale.getDefault()).format(this)
+fun Date.getStringMonth(): String {
+    return SimpleDateFormat("MMMM yyyy", Locale.getDefault()).format(this)
 }
