@@ -1,4 +1,4 @@
-package com.mityaalim.ui.main.budget
+package com.mityaalim.ui.main.budget.addBudget
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

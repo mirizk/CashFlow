@@ -38,7 +38,9 @@ class BudgetFragment : Fragment() {
         }
 
         viewModel.monthBudgetList.observe(viewLifecycleOwner){
-            val adapter = MonthBudgetAdapter()
+            val adapter = MonthBudgetAdapter({
+                findNavController().navigate(BudgetFragmentDirections.actionBudgetFragmentToBudgetDetailsFragment(it))
+            })
             val layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
             binding.recyclerview.adapter = adapter
             binding.recyclerview.layoutManager = layoutManager

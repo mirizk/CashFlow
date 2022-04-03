@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         tools:text="01/22"
         android:textColor="@color/text_color"
-        android:textSize="@dimen/_14ssp"
+        android:textSize="@dimen/_12ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/incomes"
         app:layout_constraintStart_toStartOf="parent"

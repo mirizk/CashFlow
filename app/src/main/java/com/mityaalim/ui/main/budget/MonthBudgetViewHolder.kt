@@ -6,11 +6,18 @@ import com.maatayim.koren.ui.base.list.BaseViewHolder
 import com.mityaalim.databinding.ItemMonthBudgetBinding
 
 class MonthBudgetViewHolder(
-    private val binding: ItemMonthBudgetBinding
+    private val binding: ItemMonthBudgetBinding,
+    val clickListener: (month: String) -> Unit
 ) : BaseViewHolder<MonthBudgetItem>(binding.root) {
-    override fun bind(item: MonthBudgetItem) {
+    private lateinit var item: MonthBudgetItem
+    init {
+        binding.root.setOnClickListener {
+            clickListener.invoke(item.month)
+        }
+    }
 
-        Log.d("miri", "${item.month}: incomes ${item.incomes}. expenses ${item.expenses}")
+    override fun bind(item: MonthBudgetItem) {
+        this.item = item
         binding.incomes.layoutParams.height = ((item.incomes.toDouble() / 10).toInt())
         binding.expenses.layoutParams.height = ((item.expenses.toDouble() / 10).toInt())
 

@@ -1,4 +1,4 @@
-package com.mityaalim.ui.main.budget
+package com.mityaalim.ui.main.budget.addBudget
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
