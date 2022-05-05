@@ -4,6 +4,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.MultiTransformation
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.maatayim.koren.ui.base.list.BaseViewHolder
+import com.mityaalim.R
 import com.mityaalim.databinding.ItemServiceBinding
 
 class ServiceViewHolder(
@@ -17,13 +18,13 @@ class ServiceViewHolder(
         item.imageUrl?.let {
             Glide
                 .with(binding.root.context)
-                .load(item.imageUrl)
+                .load(it)
                 .transform(
                     MultiTransformation(
-                        CenterCrop(),
+                        CenterCrop()
                     )
                 )
-                .into(binding.background)
+                .into(binding.image)
         }
     }
 }
