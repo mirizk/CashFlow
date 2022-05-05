@@ -6,6 +6,7 @@ import com.mityaalim.data.general.Budget
 import com.mityaalim.data.local.database.LocalDataSource
 import com.mityaalim.data.local.prefs.Prefs
 import com.mityaalim.ui.main.events.EventItem
+import com.mityaalim.ui.main.investment.ServiceItem
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
@@ -16,18 +17,12 @@ class RepoImpl @Inject constructor(
 
     override fun getAllEvents(): LiveData<List<EventItem>> { //todo get the data from database
         val events = listOf(
-            EventItem("1","כנס בוגרים", "פירוט ומידע על האירוע לדוגמא, פה נכנס מידע לגבי האירוע. כטטער", "22.08.22 18:30"),
-            EventItem("2","אירוע 2", "כלכלה נכונה", "4.5.23 12:00"),
-            EventItem("3","כנס בוגרים", "איקגטרא דקקג כטטער", "22.08.22 18:30"),
-            EventItem("4","אירוע 2", "כלכלה נכונה", "4.5.23 12:00"),
-            EventItem("5","כנס בוגרים", " דקקג כטטער", "22.08.22 18:30"),
-            EventItem("6","אירוע 2", "כלכלה נכונה", "4.5.23 12:00"),
-            EventItem("7","כנס ", "איקגטרא דקקג ", "22.08.22 18:30"),
-            EventItem("8","אירוע 8", "כלכלה נכונה", "4.5.23 12:00"),
-            EventItem("9","כנס בוגרים", "איקגטרא דקקג כטטער", "22.08.22 18:30"),
-            EventItem("10","אירוע 10", "כלכלה נכונה", "4.5.23 12:00"),
-            EventItem("11","כנס בוגרים11", " פירוט ומידע על האירוע לדוגמא, פה נכנס מידע לגבי האירוע", "22.08.22 18:00"),
-            EventItem("12","אירוע 12", "כלכלה נכונה", "4.5.23 12:00"),)
+            EventItem("1","קורס השקעות חינמי", "איך מנהלים תיק השקעות", "22.06.22 18:30"),
+            EventItem("2","קורס השקעות חינמי", "קרנות נאמנות", "04.07.22 19:00"),
+            EventItem("3","קורס השקעות חינמי", "בורסה", "18.07.22 18:30"),
+            EventItem("4","מבוא לכלכלת המשפחה", "קורס זוגות", "20.07.22 15:00"),
+            EventItem("5","מתייעלים בנדלן", "נדלן להשקעה והיבטים משפטיים", "22.08.22 18:00"),
+            EventItem("6","מושגים פיננסיים", "כל הסודות מאחורי המונחים", "01.09.09 12:00"),)
         return MutableLiveData(events)
     }
 
@@ -41,5 +36,17 @@ class RepoImpl @Inject constructor(
 
     override fun deleteBudget(budget: Budget) {
         localDataSource.deleteBudget(budget)
+    }
+
+    override fun getAllServices(): LiveData<List<ServiceItem>> {
+        val services = listOf(
+            ServiceItem("1","ליווי אישי – הכל כלול", "פגישת ליווי אישי הכוללת: מעבר על נושאים של בניית תוכנית כלכלית למשק הבית, תכנון ועזרה בבחירת ניירות ערך לצרכי בניית תיק השקעות, הוזלת עלויות בביטוחים, וסידור הפנסיה.", 100f, "https://f4e7x9d9.rocketcdn.me/wp-content/uploads/2020/06/cropped-aaron-burden-xG8IQMqMITM-unsplash-scaled-1-1024x613.jpg"),
+            ServiceItem("2","שירותי ראיית חשבון לעסקים ושכירים", "בין אם אתם שכירים שצריכים החזר מס, או עסקים קטנים שצריכים סיוע עם כל הנהלת החשבונות, אנחנו פה בשביל לעזור. העלות תלויה בצרכי ודרישות הלקוח."),
+            ServiceItem("3","פגישת ייעוץ עם יועץ נדל\"ן עצמאי ובלתי תלוי", "שיחת ייעוץ נדל\"ן עם יועץ עצמאי ובלתי תלוי, שבה נעבור איתכם ביחד על כל השאלות שיש לכם לגבי שוק הנדל\"ן וכיצד אפשר להשקיע בצורה נבונה.", 300f),
+//            ServiceItem("4","מבוא לכלכלת המשפחה", "קורס זוגות", ),
+//            ServiceItem("5","מתייעלים בנדלן", "נדלן להשקעה והיבטים משפטיים"),
+//            ServiceItem("6","מושגים פיננסיים", "כל הסודות מאחורי המונחים"),
+            )
+        return MutableLiveData(services)
     }
 }
