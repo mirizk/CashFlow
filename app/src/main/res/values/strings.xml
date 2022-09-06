@@ -15,10 +15,18 @@
     <string name="save">save</string>
     <string name="services">Services in the community</string>
     <string name="welcome">Welcome!</string>
-    <string name="user">username or email address</string>
-    <string name="password">password</string>
+    <string name="user">Username or Email address</string>
+    <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
     <string name="dont_have_an_account">Don\'t have an account?</string>
-    <string name="register">Register Now</string>
+    <string name="register_now">Register Now</string>
     <string name="forgot_password">forgot password</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="uasr_name">User Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+    <string name="have_account">I have an account</string>
+
 </resources>

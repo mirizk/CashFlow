@@ -12,13 +12,20 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.mityaalim.ui.main.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_eventsFragment"
             app:destination="@id/eventsFragment" />
@@ -48,17 +55,17 @@
         android:id="@+id/investmentFragment"
         android:name="com.mityaalim.ui.main.investment.InvestmentFragment"
         android:label="InvestmentFragment"
-        tools:layout="@layout/fragment_investment"/>
+        tools:layout="@layout/fragment_investment" />
     <fragment
         android:id="@+id/eventsFragment"
         android:name="com.mityaalim.ui.main.events.EventsFragment"
         android:label="EventsFragment"
-        tools:layout="@layout/fragment_events"/>
+        tools:layout="@layout/fragment_events" />
     <fragment
         android:id="@+id/academyFragment"
         android:name="com.mityaalim.ui.main.events.AcademyFragment"
         android:label="AcademyFragment"
-        tools:layout="@layout/fragment_academy"/>
+        tools:layout="@layout/fragment_academy" />
     <fragment
         android:id="@+id/addBudgetFragment"
         android:name="com.mityaalim.ui.main.budget.addBudget.AddBudgetFragment"
@@ -76,5 +83,21 @@
         <argument
             android:name="month"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.mityaalim.ui.main.login.register.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

@@ -19,6 +19,14 @@
     <string name="password">סיסמה</string>
     <string name="sign_in">לחשבון שלי</string>
     <string name="dont_have_an_account">עדיין אין לכם חשבון?</string>
-    <string name="register">להרשמה</string>
+    <string name="register_now">להרשמה</string>
     <string name="forgot_password">שכחתי סיסמה</string>
+    <string name="first_name">שם פרטי</string>
+    <string name="last_name">שם משפחה</string>
+    <string name="uasr_name">שם משתמש</string>
+    <string name="email_address">דוא\"ל</string>
+    <string name="confirm_password">אימות סיסמה</string>
+    <string name="register">להרשמה</string>
+    <string name="have_account">יש לי כבר חשבון</string>
+
 </resources>
