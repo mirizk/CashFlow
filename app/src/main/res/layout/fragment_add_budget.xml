@@ -12,10 +12,10 @@
         android:layout_height="0dp"
         android:contentDescription="@string/logoContentDescription"
         android:src="@drawable/logo"
-        app:layout_constraintWidth_percent=".4"
         app:layout_constraintDimensionRatio="3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".4" />
 
     <TextView
         android:id="@+id/title"
@@ -84,12 +84,13 @@
 
     <EditText
         android:id="@+id/edit_name"
+        style="@style/EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_40sdp"
+        android:importantForAutofill="no"
         android:inputType="text"
-        android:textColor="@color/text_color"
         app:layout_constraintBottom_toBottomOf="@id/name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/name"
@@ -97,11 +98,12 @@
 
     <EditText
         android:id="@+id/edit_sum"
+        style="@style/EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
+        android:importantForAutofill="no"
         android:inputType="number"
-        android:textColor="@color/text_color"
         app:layout_constraintBottom_toBottomOf="@id/sum"
         app:layout_constraintEnd_toEndOf="@id/edit_name"
         app:layout_constraintStart_toEndOf="@id/sum"
@@ -109,16 +111,16 @@
 
     <EditText
         android:id="@+id/edit_date"
+        style="@style/EditTextStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
-        android:textColor="@color/text_color"
-        android:focusable="false"
         android:clickable="true"
+        android:focusable="false"
+        android:importantForAutofill="no"
         app:layout_constraintBottom_toBottomOf="@id/date"
         app:layout_constraintEnd_toEndOf="@id/edit_name"
         app:layout_constraintStart_toEndOf="@id/date"
         app:layout_constraintTop_toTopOf="@id/date" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

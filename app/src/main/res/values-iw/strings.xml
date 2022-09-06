@@ -14,4 +14,11 @@
     <string name="budget_date">תאריך:</string>
     <string name="save">שמור</string>
     <string name="services">שירותים בקהילה</string>
+    <string name="welcome">ברוכים הבאים!</string>
+    <string name="user">שם משתמש או כתובת אימייל</string>
+    <string name="password">סיסמה</string>
+    <string name="sign_in">לחשבון שלי</string>
+    <string name="dont_have_an_account">עדיין אין לכם חשבון?</string>
+    <string name="register">להרשמה</string>
+    <string name="forgot_password">שכחתי סיסמה</string>
 </resources>

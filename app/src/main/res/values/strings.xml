@@ -14,4 +14,11 @@
     <string name="budget_date">date:</string>
     <string name="save">save</string>
     <string name="services">Services in the community</string>
+    <string name="welcome">Welcome!</string>
+    <string name="user">username or email address</string>
+    <string name="password">password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="register">Register Now</string>
+    <string name="forgot_password">forgot password</string>
 </resources>
