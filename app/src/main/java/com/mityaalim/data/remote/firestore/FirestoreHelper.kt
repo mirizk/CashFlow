@@ -1,12 +1,14 @@
 package com.mityaalim.data.remote.firestore
 
+import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.firestoreSettings
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 
 
-class FirestoreHelper @Inject constructor(){
+class FirestoreHelper @Inject constructor() {
     val db = Firebase.firestore
     val settings = firestoreSettings {
         isPersistenceEnabled = true
@@ -14,5 +16,17 @@ class FirestoreHelper @Inject constructor(){
 
     init {
         db.firestoreSettings = settings
+    }
+
+    suspend fun readEvents(): QuerySnapshot? {
+        return try {
+            val data = db.collection("events")
+                .get()
+                .await()
+            data
+        } catch (e: Exception) {
+            null
+        }
+
     }
 }
