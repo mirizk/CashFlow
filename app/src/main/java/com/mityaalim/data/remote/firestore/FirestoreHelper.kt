@@ -1,12 +1,12 @@
 package com.mityaalim.data.remote.firestore
 
+import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.firestoreSettings
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
-
 
 class FirestoreHelper @Inject constructor() {
     val db = Firebase.firestore
@@ -28,5 +28,9 @@ class FirestoreHelper @Inject constructor() {
             null
         }
 
+    }
+
+    fun getEventsReference(): CollectionReference{
+        return db.collection("events")
     }
 }
