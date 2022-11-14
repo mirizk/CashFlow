@@ -8,7 +8,6 @@ import com.mityaalim.data.general.Event
 import com.mityaalim.data.local.database.LocalDataSource
 import com.mityaalim.data.local.prefs.Prefs
 import com.mityaalim.data.remote.RemoteDataSource
-import com.mityaalim.data.remote.model.EventItem
 import com.mityaalim.data.remote.toGeneralEventsList
 import com.mityaalim.ui.main.investment.ServiceItem
 import kotlinx.coroutines.flow.Flow

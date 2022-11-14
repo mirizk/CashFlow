@@ -1,9 +1,6 @@
 package com.mityaalim.data.local.database
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.map
 import com.mityaalim.data.general.Budget
-import com.mityaalim.data.general.Event
 import com.mityaalim.data.local.toGeneralModel
 import com.mityaalim.data.local.toLocalEntity
 import kotlinx.coroutines.flow.Flow
@@ -25,15 +22,4 @@ class LocalDataSource @Inject constructor(private val database: MityaalimDatabas
         }
     }
 
-    suspend fun insertAllEvents(events: List<Event>) {
-        database.eventDao().insertAllEvents(events.map{ it.toLocalEntity()})
-    }
-
-    fun getAllEvents() :LiveData<List<Event>>{
-        return database.eventDao().getAllEvents().map {
-            it.map {
-                it.toGeneralModel()
-            }
-        }
-    }
 }
