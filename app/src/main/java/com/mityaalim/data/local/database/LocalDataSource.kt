@@ -21,4 +21,5 @@ class LocalDataSource @Inject constructor(private val database: MityaalimDatabas
             it.map { it.toGeneralModel() }
         }
     }
+
 }

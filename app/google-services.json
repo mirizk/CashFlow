@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "692037844205",
+    "project_id": "cash-flow-3bd32",
+    "storage_bucket": "cash-flow-3bd32.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:692037844205:android:a8cc5e1b519dfad6e420e4",
+        "android_client_info": {
+          "package_name": "com.mityaalim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "692037844205-ucvf5rm53aplur8qq3eao90m38qpkbi6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxGLIZ7CfY7ljg1kGssXdGWz8IQwbRU6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "692037844205-ucvf5rm53aplur8qq3eao90m38qpkbi6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

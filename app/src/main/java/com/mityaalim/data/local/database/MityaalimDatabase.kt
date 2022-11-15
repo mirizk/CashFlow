@@ -11,22 +11,22 @@ private const val DB_NAME = "mityaalim_database"
 
 @Database(
     entities = [
-        BudgetEntity::class
+        BudgetEntity::class,
     ],
     version = 1
 )
-abstract class MityaalimDatabase: RoomDatabase() {
+abstract class MityaalimDatabase : RoomDatabase() {
 
     abstract fun budgetDao(): BudgetDao
 
-    companion object{
-        fun create(context: Context): MityaalimDatabase{
-         return Room.databaseBuilder(
-             context,
-             MityaalimDatabase::class.java,
-             DB_NAME
-         ).fallbackToDestructiveMigration()
-             .build()
+    companion object {
+        fun create(context: Context): MityaalimDatabase {
+            return Room.databaseBuilder(
+                context,
+                MityaalimDatabase::class.java,
+                DB_NAME
+            ).fallbackToDestructiveMigration()
+                .build()
         }
     }
 }
