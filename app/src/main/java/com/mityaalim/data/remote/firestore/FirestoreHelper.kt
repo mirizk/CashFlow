@@ -33,4 +33,8 @@ class FirestoreHelper @Inject constructor() {
     fun getEventsReference(): CollectionReference{
         return db.collection("events")
     }
+
+    fun getInvestmentsReference(): CollectionReference {
+        return db.collection("investments")
+    }
 }

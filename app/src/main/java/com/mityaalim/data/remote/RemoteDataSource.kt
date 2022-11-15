@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import com.google.firebase.firestore.ktx.toObject
 import com.mityaalim.data.remote.firestore.FirestoreHelper
 import com.mityaalim.data.remote.model.EventItem
+import com.mityaalim.data.remote.model.InvestmentsItem
 import javax.inject.Inject
 
 class RemoteDataSource @Inject constructor(
@@ -12,6 +13,7 @@ class RemoteDataSource @Inject constructor(
 ) {
 
     var events = MutableLiveData<List<EventItem>?>()
+    var investments = MutableLiveData<List<InvestmentsItem>?>()
     suspend fun getAllEvents(): List<EventItem>? {
         return firestoreHelper.readEvents()?.documents?.mapNotNull {
             it.toObject<EventItem>()
@@ -34,5 +36,22 @@ class RemoteDataSource @Inject constructor(
         }
         return events
     }
+    fun getInvestmentsLiveData(): LiveData<List<InvestmentsItem>?> {
+        firestoreHelper.getInvestmentsReference().addSnapshotListener { value, error ->
+            if (error != null) {
+                investments.value = null
+                return@addSnapshotListener
+            }
+
+            val investmentsList: MutableList<InvestmentsItem> = mutableListOf()
+            for (doc in value!!) {
+                val item = doc.toObject(InvestmentsItem::class.java)
+                investmentsList.add(item)
+            }
+            investments.value = investmentsList
+        }
+        return investments
+    }
+
 
 }

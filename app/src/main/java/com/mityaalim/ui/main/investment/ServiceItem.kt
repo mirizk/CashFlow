@@ -4,8 +4,8 @@ import com.maatayim.koren.ui.base.list.BaseListItem
 
 data class ServiceItem(
     val id: String,
-    val title: String,
-    val description: String,
+    val title: String? = null,
+    val description: String? = null,
     val price: Float? = null,
     val imageUrl: String? = null
 ) : BaseListItem<ServiceItem> {
