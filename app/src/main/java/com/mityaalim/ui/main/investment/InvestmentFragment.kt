@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.mityaalim.data.general.Investment
 import com.mityaalim.databinding.FragmentInvestmentBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -33,7 +33,9 @@ class InvestmentFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.services.observe(viewLifecycleOwner) {
-            val adapter = ServiceAdapter()
+            val adapter = ServiceAdapter({
+                findNavController().navigate(InvestmentFragmentDirections.actionInvestmentFragmentToInvestmentDetailsFragment(it))
+            })
             val layoutManager = GridLayoutManager(context, 2)
             binding.servicesRecyclerview.adapter = adapter
             binding.servicesRecyclerview.layoutManager = layoutManager

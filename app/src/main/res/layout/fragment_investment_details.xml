@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/logoContentDescription"
+        android:src="@drawable/logo"
+        app:layout_constraintWidth_percent=".4"
+        app:layout_constraintDimensionRatio="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        tools:text="ליווי אישי - הכל כלול" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_18ssp"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@tools:sample/avatars"/>
+
+
+    <TextView
+        android:id="@+id/payment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/background_green"
+        android:gravity="center"
+        android:text="@string/payment"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="2.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

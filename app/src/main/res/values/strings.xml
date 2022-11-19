@@ -15,4 +15,6 @@
     <string name="save">save</string>
     <string name="services">Services in the community</string>
     <string name="close_events">Close events</string>
+    <string name="accession">accession</string>
+    <string name="payment">payment</string>
 </resources>
