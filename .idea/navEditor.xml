@@ -60,6 +60,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_budgetFragment_to_budgetDetailsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
@@ -113,6 +118,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="investmentDetailsFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-249" />
+                            <option name="y" value="109" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="investmentFragment">
                     <value>
                       <LayoutPositions>
@@ -121,6 +138,15 @@
                             <option name="x" value="-601" />
                             <option name="y" value="112" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_investmentFragment_to_investmentDetailsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

@@ -15,4 +15,6 @@
     <string name="save">שמור</string>
     <string name="services">שירותים בקהילה</string>
     <string name="close_events">אירועים קרובים</string>
+    <string name="accession">להצטרפות</string>
+    <string name="payment">תשלום</string>
 </resources>

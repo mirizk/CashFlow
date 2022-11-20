@@ -6,10 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.mityaalim.data.general.Investment
 import com.mityaalim.databinding.FragmentInvestmentBinding
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class InvestmentFragment : Fragment() {
@@ -30,13 +32,20 @@ class InvestmentFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.services.observe(viewLifecycleOwner){
-            val adapter = ServiceAdapter()
+        viewModel.services.observe(viewLifecycleOwner) {
+            val adapter = ServiceAdapter({
+                findNavController().navigate(InvestmentFragmentDirections.actionInvestmentFragmentToInvestmentDetailsFragment(it))
+            })
             val layoutManager = GridLayoutManager(context, 2)
             binding.servicesRecyclerview.adapter = adapter
             binding.servicesRecyclerview.layoutManager = layoutManager
-            adapter.submitList(it)
+            adapter.submitList(it?.convertToView())
 
         }
+    }
+
+    private fun List<Investment>.convertToView(): List<ServiceItem> {
+        return map {
+            ServiceItem(it.id, it.title, it.description, it.price, it.imageUrl) }
     }
 }
