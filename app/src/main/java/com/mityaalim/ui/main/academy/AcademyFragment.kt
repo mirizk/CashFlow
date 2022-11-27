@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mityaalim.data.general.Academy
@@ -33,7 +34,9 @@ class AcademyFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.allAcademy.observe(viewLifecycleOwner){
-            val adapter = AcademyAdapter({})//todo
+            val adapter = AcademyAdapter({
+                findNavController().navigate(AcademyFragmentDirections.actionAcademyFragmentToMediaPlayerFragment(it))
+            })
 //            val layoutManager = GridLayoutManager(context, 2)
             val layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             binding.academyRecyclerview.adapter = adapter
