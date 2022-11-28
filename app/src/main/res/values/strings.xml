@@ -1,4 +1,5 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
     <string name="app_name">Mityaalim</string>
     <string name="events">events</string>
     <string name="investment">investments</string>
@@ -17,4 +18,18 @@
     <string name="close_events">Close events</string>
     <string name="accession">accession</string>
     <string name="payment">payment</string>
+    <string name="the_daily_tip">The daily tip</string>
+    <string name="the_first_tip">Don\'t need - don\'t consume.
+When you are debating about the feasibility of the purchase, remember that you are what you need to buy
+You have already defined them in advance, in most cases, before you left the house. Don\'t be tempted to buy
+A product you didn\'t plan to buy.</string>
+    <string name="the_second_tip">Arrived at Super Seventy:
+Hungry people buy more and less healthy - studies show that there is even a shortage
+Short-term in food may lead to a change in the choice of food products and lead to a purchase
+Greater consumption of less healthy food products.</string>
+    <string name="the_third_tip">Do not divide into payments - try to get rid of the habit of dividing many expenses into payments, it creates a false sense of a low monthly charge. With this method, you accumulate debt over time that will drag you to a negative balance and even exceed the limit.</string>
+    <string name="the_fourth_tip">Work more with cash - those who feel that their expenses are getting out of control should pay less with a credit card and more in cash. That way, at any given time you will know what your true situation is in the bank account and you will not receive a "surprise" of additional debt at the time of the monthly credit card charge.</string>
+    <string name="the_fifth_tip">Do not buy under pressure - do not make purchases when you are pressed for time, tired, irritated or tense. Have you been offered an offer that you won\'t return? It\'s just a sales tactic. What you can buy today, will be there tomorrow.</string>
+    <string name="the_sixth_tip">It is allowed to indulge and spend time, but if and according to the budget - set a budget for yourself for indulgences. That way, you will both enjoy life and not be tempted to spend too much. Purchase tickets on discount websites, by using coupons, through employee councils, club memberships, purchasing groups or Facebook groups. Take advantage of discounted entertainment - spending time with the children is expensive? Nature, the sea and the parks are free.</string>
+    <string name="the_seventh_tip">Always compare prices and check - make it a regular habit for yourself, check prices and compare with every purchase, do a market survey, in different stores and on price comparison websites. Buy at the place that is the most profitable for you.</string>
 </resources>

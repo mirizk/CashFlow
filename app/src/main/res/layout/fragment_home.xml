@@ -152,4 +152,32 @@
         app:layout_constraintEnd_toEndOf="@id/budget_background"
         app:layout_constraintBottom_toBottomOf="@id/budget_background"/>
 
+    <TextView
+        android:id="@+id/tip_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/the_daily_tip"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_19ssp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:layout_constraintTop_toBottomOf="@id/academy_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/tip_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/the_second_tip"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_14ssp"
+        android:paddingVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:gravity="center"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/tip_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
