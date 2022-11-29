@@ -21,6 +21,6 @@ class EventViewHolder(
 
         val dateFormated = item.time?.toDate()?.let { SimpleDateFormat("dd/MM/yyyy  HH:ss").format(it) }
         binding.eventTime.text = dateFormated
-
+        binding.eventLocation.text=item.location
     }
 }

@@ -9,14 +9,18 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/big_logo"
         android:layout_marginTop="@dimen/_37sdp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:adjustViewBounds="true"
+        android:maxWidth="200dp"
+        android:maxHeight="130dp"
+
+        android:contentDescription="@string/logoContentDescription"
+        android:src="@drawable/big_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="@string/logoContentDescription" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/centerline"
@@ -168,7 +172,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintWidth_percent="0.9"
         app:layout_constraintDimensionRatio="2"
-        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
         android:background="@drawable/background_tip" />
 
     <ImageView
@@ -179,7 +183,8 @@
         android:src="@drawable/ic_tip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:padding="@dimen/_4sdp"
+        android:paddingStart="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         tools:ignore="ContentDescription" />
 
     <TextView
