@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.MultiTransformation
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
@@ -30,10 +31,10 @@ class InvestmentDetailsFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.service.observe(viewLifecycleOwner){
-            binding.title.text = it?.title
-            binding.description.text = it?.description
-            it?.imageUrl?.let {
+        viewModel.service.observe(viewLifecycleOwner){ investment->
+            binding.title.text = investment?.title
+            binding.description.text = investment?.description
+            investment?.imageUrl?.let {
                 Glide
                     .with(binding.root.context)
                     .load(it)
@@ -44,7 +45,11 @@ class InvestmentDetailsFragment: Fragment() {
                     )
                     .into(binding.background)
             }
-
+            binding.payment.setOnClickListener {
+                investment?.price?.let { price ->
+                findNavController().navigate(
+                    InvestmentDetailsFragmentDirections.actionInvestmentDetailsFragmentToPaymentFragment(price) )}
+            }
         }
     }
 }

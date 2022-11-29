@@ -13,7 +13,9 @@
         android:contentDescription="@string/logoContentDescription"
         android:src="@drawable/logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_10sdp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

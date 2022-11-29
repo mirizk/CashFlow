@@ -13,4 +13,6 @@
     <color name="text_color">#434343</color>
     <color name="incomes_color">#308230</color>
     <color name="expenses_color">#B12323</color>
+    <color name="hint_text_color">#5B7C80</color>
+
 </resources>

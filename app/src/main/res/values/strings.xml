@@ -32,4 +32,12 @@ Greater consumption of less healthy food products.</string>
     <string name="the_fifth_tip">Do not buy under pressure - do not make purchases when you are pressed for time, tired, irritated or tense. Have you been offered an offer that you won\'t return? It\'s just a sales tactic. What you can buy today, will be there tomorrow.</string>
     <string name="the_sixth_tip">It is allowed to indulge and spend time, but if and according to the budget - set a budget for yourself for indulgences. That way, you will both enjoy life and not be tempted to spend too much. Purchase tickets on discount websites, by using coupons, through employee councils, club memberships, purchasing groups or Facebook groups. Take advantage of discounted entertainment - spending time with the children is expensive? Nature, the sea and the parks are free.</string>
     <string name="the_seventh_tip">Always compare prices and check - make it a regular habit for yourself, check prices and compare with every purchase, do a market survey, in different stores and on price comparison websites. Buy at the place that is the most profitable for you.</string>
+    <string name="credit_card_details">Credit Card Details</string>
+    <string name="ok">OK</string>
+    <string name="credit_card_number">credit card number</string>
+    <string name="cvv">cvv</string>
+    <string name="card_id">card holder\'s ID</string>
+    <string name="card_name">card holder\'s name</string>
+    <string name="total_payment">total payment:</string>
+    <string name="invalid_card">invalid card</string>
 </resources>
