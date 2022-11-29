@@ -8,14 +8,13 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/logoContentDescription"
         android:src="@drawable/logo"
-        app:layout_constraintWidth_percent=".4"
-        app:layout_constraintDimensionRatio="3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView
         android:id="@+id/title"
@@ -28,7 +27,7 @@
         android:layout_marginTop="@dimen/_15sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/services_recyclerview"
@@ -38,11 +37,11 @@
         android:clipToPadding="false"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title"
         app:spanCount="2"
-        tools:listitem="@layout/item_service" />
+        tools:listitem="@layout/item_service"
+        app:layout_constraintBottom_toTopOf="@id/logo"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

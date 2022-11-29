@@ -8,14 +8,14 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:contentDescription="@string/logoContentDescription"
         android:src="@drawable/logo"
-        app:layout_constraintWidth_percent=".4"
-        app:layout_constraintDimensionRatio="3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
     <TextView
         android:id="@+id/title"
@@ -27,7 +27,7 @@
         android:layout_marginTop="@dimen/_20sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="מרץ 2022" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -36,10 +36,10 @@
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/_10sdp"
         android:clipToPadding="false"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/logo"
         tools:listitem="@layout/item_budget" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

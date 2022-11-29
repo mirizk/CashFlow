@@ -9,13 +9,18 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_37sdp"
+        android:adjustViewBounds="true"
+        android:maxWidth="200dp"
+        android:maxHeight="130dp"
+
+        android:contentDescription="@string/logoContentDescription"
+        android:src="@drawable/big_logo"
         app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="@string/logoContentDescription" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/centerline"
@@ -36,15 +41,17 @@
         app:layout_constraintVertical_bias="0.3"
         app:layout_constraintWidth_percent="0.35"
         app:layout_constraintDimensionRatio="1" />
+
     <ImageView
         android:id="@+id/ic_events"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_event"
         android:layout_marginTop="@dimen/_5sdp"
-        app:layout_constraintTop_toTopOf="@id/events_background"
-        app:layout_constraintStart_toStartOf="@id/events_background"
+        android:src="@drawable/ic_event"
+        app:layout_constraintBottom_toTopOf="@+id/events"
         app:layout_constraintEnd_toEndOf="@id/events_background"
+        app:layout_constraintStart_toStartOf="@id/events_background"
+        app:layout_constraintTop_toTopOf="@id/events_background"
         tools:ignore="ContentDescription" />
     <TextView
         android:id="@+id/events"
@@ -72,6 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_investment"
+        app:layout_constraintBottom_toTopOf="@id/investment"
         android:layout_marginTop="@dimen/_5sdp"
         app:layout_constraintTop_toTopOf="@id/investment_background"
         app:layout_constraintStart_toStartOf="@id/investment_background"
@@ -106,6 +114,7 @@
         android:src="@drawable/ic_academy"
         android:layout_marginTop="@dimen/_5sdp"
         app:layout_constraintTop_toTopOf="@id/academy_background"
+        app:layout_constraintBottom_toTopOf="@id/academy"
         app:layout_constraintStart_toStartOf="@id/academy_background"
         app:layout_constraintEnd_toEndOf="@id/academy_background"
         tools:ignore="ContentDescription" />
@@ -131,15 +140,17 @@
         app:layout_constraintStart_toEndOf="@id/centerline"
         app:layout_constraintWidth_percent="0.35"
         app:layout_constraintDimensionRatio="1" />
+
     <ImageView
         android:id="@+id/ic_budget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_budget"
         android:layout_marginTop="@dimen/_5sdp"
-        app:layout_constraintTop_toTopOf="@id/budget_background"
-        app:layout_constraintStart_toStartOf="@id/budget_background"
+        android:src="@drawable/ic_budget"
+        app:layout_constraintBottom_toTopOf="@+id/budget"
         app:layout_constraintEnd_toEndOf="@id/budget_background"
+        app:layout_constraintStart_toStartOf="@id/budget_background"
+        app:layout_constraintTop_toTopOf="@id/budget_background"
         tools:ignore="ContentDescription" />
     <TextView
         android:id="@+id/budget"
@@ -152,6 +163,30 @@
         app:layout_constraintEnd_toEndOf="@id/budget_background"
         app:layout_constraintBottom_toBottomOf="@id/budget_background"/>
 
+    <View
+        android:id="@+id/tip_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintDimensionRatio="2"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:background="@drawable/background_tip" />
+
+    <ImageView
+        android:id="@+id/ic_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:src="@drawable/ic_tip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingStart="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        tools:ignore="ContentDescription" />
+
     <TextView
         android:id="@+id/tip_title"
         android:layout_width="wrap_content"
@@ -160,24 +195,25 @@
         android:textColor="@color/text_color"
         android:textSize="@dimen/_19ssp"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/_30sdp"
-        app:layout_constraintTop_toBottomOf="@id/academy_background"
+        android:layout_marginTop="@dimen/_9sdp"
+
+        app:layout_constraintTop_toTopOf="@id/tip_background"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
     <TextView
         android:id="@+id/tip_content"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:gravity="center"
         android:text="@string/the_second_tip"
         android:textColor="@color/text_color"
-        android:textSize="@dimen/_14ssp"
-        android:paddingVertical="@dimen/_10sdp"
-        android:paddingHorizontal="@dimen/_15sdp"
-        android:gravity="center"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintTop_toBottomOf="@id/tip_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintWidth_percent="0.7"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintBottom_toBottomOf="@id/tip_background"
+        app:layout_constraintEnd_toEndOf="@id/tip_background"
+        app:layout_constraintStart_toStartOf="@id/tip_background"
+        app:layout_constraintTop_toBottomOf="@id/tip_title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
