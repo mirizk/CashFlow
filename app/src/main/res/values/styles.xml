@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="EditTextStyle">
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textColorHint">@color/hint_text_color</item>
+        <item name="android:singleLine">true</item>
+        <item name="backgroundTint">@color/dark_green</item>
+
+    </style>
+</resources>

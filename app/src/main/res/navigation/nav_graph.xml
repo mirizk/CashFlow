@@ -81,5 +81,18 @@
         <argument
             android:name="investmentId"
             app:argType="string" />
+        <action
+            android:id="@+id/action_investmentDetailsFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.mityaalim.ui.main.investment.payment.PaymentFragment"
+        android:label="PaymentFragment"
+        tools:layout="@layout/fragment_payment">
+        <argument
+            android:name="price"
+            app:argType="float" />
+    </fragment>
+
 </navigation>
