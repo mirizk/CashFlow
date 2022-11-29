@@ -54,7 +54,11 @@
         android:id="@+id/academyFragment"
         android:name="com.mityaalim.ui.main.events.AcademyFragment"
         android:label="AcademyFragment"
-        tools:layout="@layout/fragment_academy"/>
+        tools:layout="@layout/fragment_academy">
+        <action
+            android:id="@+id/action_academyFragment_to_mediaPlayerFragment"
+            app:destination="@id/mediaPlayerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/addBudgetFragment"
         android:name="com.mityaalim.ui.main.budget.addBudget.AddBudgetFragment"
@@ -94,5 +98,14 @@
             android:name="price"
             app:argType="float" />
     </fragment>
-
+    <fragment
+        android:id="@+id/mediaPlayerFragment"
+        android:name="com.mityaalim.ui.main.academy.mediaPlayer.MediaPlayerFragment"
+        android:label="MediaPlayerFragment"
+        tools:layout="@layout/fragment_media_player">
+    <argument
+        android:name="videoUrl"
+        app:argType="string"
+        app:nullable="true" />
+    </fragment>
 </navigation>

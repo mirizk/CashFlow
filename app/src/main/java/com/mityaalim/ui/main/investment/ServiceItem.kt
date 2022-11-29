@@ -16,6 +16,7 @@ data class ServiceItem(
     override fun isContentTheSame(newItem: ServiceItem): Boolean {
         return title == newItem.title &&
                 description == newItem.description &&
-                price == newItem.price
+                price == newItem.price &&
+                imageUrl == newItem.imageUrl
     }
 }

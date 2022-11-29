@@ -7,4 +7,5 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AcademyViewModel @Inject constructor(private val repo: GeneralRepo) : ViewModel() {
+    val allAcademy = repo.getAcademyLiveData()
 }
