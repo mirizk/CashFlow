@@ -38,7 +38,8 @@ class MediaPlayerFragment: Fragment() {
         exoPlayer = ExoPlayer.Builder(requireContext()).build()
         binding.exoPlayerView.player = exoPlayer
         exoPlayer?.playWhenReady = true
-        exoPlayer?.setMediaItem(MediaItem.fromUri("https://drive.google.com/file/d/1YXF5umkGTS33lE9cEeMWXrokjcpjzuB-/view?usp=share_link"?:""))
+        exoPlayer?.setMediaItem(MediaItem.fromUri(args.videoUrl?: ""))
+//        exoPlayer?.setMediaItem(MediaItem.fromUri("https://drive.google.com/file/d/1YXF5umkGTS33lE9cEeMWXrokjcpjzuB-/view?usp=share_link"?:""))
 //        exoPlayer?.setMediaItem(MediaItem.fromUri("https://youtu.be/MWM1_S_xNVU"?:""))
         exoPlayer?.prepare()
     }
