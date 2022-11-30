@@ -6,6 +6,6 @@
 .externalNativeBuild
 .cxx
 local.properties
-/app/src/test/java/com/mityaalim/ExampleUnitTest.kt
-/app/src/androidTest/java/com/mityaalim/ExampleInstrumentedTest.kt
+/app/src/test/java/com/chashflow/ExampleUnitTest.kt
+/app/src/androidTest/java/com/chashflow/ExampleInstrumentedTest.kt
 /.idea

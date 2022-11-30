@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mityaalim">
+    package="com.cashflow">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:name="com.mityaalim.MityaalimApplication"
+        android:name="com.cashflow.CashFlowApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_tip"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_tip"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Mityaalim">
+        android:theme="@style/Theme.CashFlow">
         <activity
-            android:name="com.mityaalim.ui.main.MainActivity"
+            android:name="com.cashflow.ui.main.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar"
@@ -28,7 +28,7 @@
         </activity>
 
         <service
-            android:name="com.mityaalim.ui.main.budget.notifications.NotificationListener"
+            android:name="com.cashflow.ui.main.budget.notifications.NotificationListener"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
             android:exported="true">
             <intent-filter>
