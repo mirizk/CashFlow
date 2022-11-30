@@ -1,5 +1,7 @@
 package com.mityaalim.ui.main.investment
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -41,6 +43,12 @@ class InvestmentFragment : Fragment() {
             binding.servicesRecyclerview.layoutManager = layoutManager
             adapter.submitList(it?.convertToView())
 
+        }
+
+        binding.economicNews.setOnClickListener {
+            val uri = Uri.parse("https://www.calcalist.co.il/home/0,7340,L-3704-504,00.html")
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
         }
     }
 

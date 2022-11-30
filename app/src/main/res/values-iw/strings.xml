@@ -39,4 +39,5 @@
     <string name="card_name">שם בעל הכרטיס</string>
     <string name="total_payment">סה\"כ לתשלום:</string>
     <string name="invalid_card">אחד או יותר מהפרטים שהזנת שגויים</string>
+    <string name="economic_news"><u>מעבר לחדשות כלכליות</u></string>
 </resources>
