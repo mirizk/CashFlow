@@ -40,4 +40,5 @@ Greater consumption of less healthy food products.</string>
     <string name="card_name">card holder\'s name</string>
     <string name="total_payment">total payment:</string>
     <string name="invalid_card">invalid card</string>
+    <string name="economic_news"><u>Go to economic news</u></string>
 </resources>
