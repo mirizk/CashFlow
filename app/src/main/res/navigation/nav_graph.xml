@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.mityaalim.ui.main.home.HomeFragment"
+        android:name="com.cashflow.ui.main.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/budgetFragment"
-        android:name="com.mityaalim.ui.main.budget.BudgetFragment"
+        android:name="com.cashflow.ui.main.budget.BudgetFragment"
         android:label="BudgetFragment"
         tools:layout="@layout/fragment_budget">
         <action
@@ -38,7 +38,7 @@
     </fragment>
     <fragment
         android:id="@+id/investmentFragment"
-        android:name="com.mityaalim.ui.main.investment.InvestmentFragment"
+        android:name="com.cashflow.ui.main.investment.InvestmentFragment"
         android:label="InvestmentFragment"
         tools:layout="@layout/fragment_investment">
         <action
@@ -47,12 +47,12 @@
     </fragment>
     <fragment
         android:id="@+id/eventsFragment"
-        android:name="com.mityaalim.ui.main.events.EventsFragment"
+        android:name="com.cashflow.ui.main.events.EventsFragment"
         android:label="EventsFragment"
         tools:layout="@layout/fragment_events"/>
     <fragment
         android:id="@+id/academyFragment"
-        android:name="com.mityaalim.ui.main.events.AcademyFragment"
+        android:name="com.cashflow.ui.main.events.AcademyFragment"
         android:label="AcademyFragment"
         tools:layout="@layout/fragment_academy">
         <action
@@ -61,16 +61,16 @@
     </fragment>
     <fragment
         android:id="@+id/addBudgetFragment"
-        android:name="com.mityaalim.ui.main.budget.addBudget.AddBudgetFragment"
+        android:name="com.cashflow.ui.main.budget.addBudget.AddBudgetFragment"
         android:label="AddBudgetFragment"
         tools:layout="@layout/fragment_add_budget">
         <argument
             android:name="type"
-            app:argType="com.mityaalim.data.enums.BudgetType" />
+            app:argType="com.cashflow.data.enums.BudgetType" />
     </fragment>
     <fragment
         android:id="@+id/budgetDetailsFragment"
-        android:name="com.mityaalim.ui.main.budget.budgetDetails.BudgetDetailsFragment"
+        android:name="com.cashflow.ui.main.budget.budgetDetails.BudgetDetailsFragment"
         android:label="BudgetDetailsFragment"
         tools:layout="@layout/fragment_budget_details">
         <argument
@@ -79,7 +79,7 @@
     </fragment>
     <fragment
         android:id="@+id/investmentDetailsFragment"
-        android:name="com.mityaalim.ui.main.investment.investmentDetails.InvestmentDetailsFragment"
+        android:name="com.cashflow.ui.main.investment.investmentDetails.InvestmentDetailsFragment"
         android:label="InvestmentDetailsFragment"
         tools:layout="@layout/fragment_investment_details">
         <argument
@@ -91,7 +91,7 @@
     </fragment>
     <fragment
         android:id="@+id/paymentFragment"
-        android:name="com.mityaalim.ui.main.investment.payment.PaymentFragment"
+        android:name="com.cashflow.ui.main.investment.payment.PaymentFragment"
         android:label="PaymentFragment"
         tools:layout="@layout/fragment_payment">
         <argument
@@ -100,7 +100,7 @@
     </fragment>
     <fragment
         android:id="@+id/mediaPlayerFragment"
-        android:name="com.mityaalim.ui.main.academy.mediaPlayer.MediaPlayerFragment"
+        android:name="com.cashflow.ui.main.academy.mediaPlayer.MediaPlayerFragment"
         android:label="MediaPlayerFragment"
         tools:layout="@layout/fragment_media_player">
     <argument
