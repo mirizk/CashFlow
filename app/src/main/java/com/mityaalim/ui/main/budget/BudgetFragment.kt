@@ -1,15 +1,17 @@
 package com.mityaalim.ui.main.budget
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.mityaalim.databinding.FragmentBudgetBinding
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mityaalim.data.enums.BudgetType
+import com.mityaalim.databinding.FragmentBudgetBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -30,6 +32,8 @@ class BudgetFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        startActivity( Intent(ACTION_NOTIFICATION_LISTENER_SETTINGS))
+
         binding.addIncome.setOnClickListener {
             findNavController().navigate(BudgetFragmentDirections.actionBudgetFragmentToAddBudgetFragment(BudgetType.INCOME))
         }
